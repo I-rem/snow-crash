@@ -88,3 +88,5 @@ For the bonus part, you can complete the following list of levels:
 
 ![image](https://github.com/user-attachments/assets/eb9d9398-41da-4875-8364-f2c60e0f01f3)
 
+![image](https://github.com/user-attachments/assets/4ba8c891-f3d4-4b02-aac0-87c7b5890d18)
+
