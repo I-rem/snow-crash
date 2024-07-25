@@ -76,3 +76,15 @@ For the bonus part, you can complete the following list of levels:
 
 # Resources Suggested by Intra Notions
 ![image](https://github.com/user-attachments/assets/ea8bc07b-e776-4b1c-8e0a-ae2cbf55e600)
+
+# VM Setup
+![image](https://github.com/user-attachments/assets/6e326bd5-f78c-4838-901b-28dac8dd4ece)
+
+![image](https://github.com/user-attachments/assets/104fe8d2-b2a8-479b-af3b-05c679702913)
+
+![image](https://github.com/user-attachments/assets/a2acb07e-812d-48b4-af7e-6014d9669f5f)
+
+![image](https://github.com/user-attachments/assets/9aa57af8-f7ec-40ae-a66e-b62c3ec1fd39)
+
+![image](https://github.com/user-attachments/assets/eb9d9398-41da-4875-8364-f2c60e0f01f3)
+
