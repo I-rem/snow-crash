@@ -73,3 +73,6 @@ For the bonus part, you can complete the following list of levels:
 - level12
 - level13
 - level14
+
+# Resources Suggested by Intra Notions
+![image](https://github.com/user-attachments/assets/ea8bc07b-e776-4b1c-8e0a-ae2cbf55e600)
