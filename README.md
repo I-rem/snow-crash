@@ -11,7 +11,7 @@ you will get a simple prompt with an IP:
   💡 If the IP address is not visible, you can get it with the comand ifconfig once you're connected
 
 - Then you will be able to register using the following login:password:level100:level100
-  Use the SSH connection available on port 4242: `ssh level100@192.168.16.128 -p 4242`
+  Use the SSH connection available on port 4242: `$>ssh level100@192.168.16.128 -p 4242`
 
 - Once registered, you’re gonna have to find the password that will log you in with
 the "flagXX" account(XX = current level number).
@@ -36,3 +36,40 @@ from time to time. You should not work directly on the machine.
 the cause.
 
 # Mandatory Part
+- Your repo must include anything that helped you solve each validated test
+- Your repository will look like this:
+
+  ![image](https://github.com/user-attachments/assets/af5a1c13-99f6-4a80-bb55-67a2355a8fe8)
+  
+- You will keep everything you need to prove your results during the evaluation in
+the resource folder. The flag file may be empty, but you may have to explain why
+
+⚠️ You must be able to clearly and precisely explain anything
+that is included in the folder. The folder mustn’t include ANY
+binary.
+
+- If you need to use a specific file that’s included on the project’s ISO, you must download it during the evaluation. You must put it in your repo under no circumstances.
+- If you plan to use a specific external software, you must set up a specific environment (VM, docker, Vagrant).
+- You’re invited to create scripts that will make you stall, but you will have to explain
+them during the evaluation.
+- For the mandatory part, you must complete the following list of levels:
+  - level00.
+  - level01.
+  - level02.
+  - level03.
+  - level04.
+  - level05.
+  - level06.
+  - level07.
+  - level08.
+  - level09.
+  
+⚠️ You cannot bruteforce the ssh flags.
+
+# Bonus Part
+For the bonus part, you can complete the following list of levels:
+- level10
+- level11
+- level12
+- level13
+- level14
