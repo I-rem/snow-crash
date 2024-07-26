@@ -8,7 +8,7 @@ you will get a simple prompt with an IP:
 
 ![image](https://github.com/user-attachments/assets/a3ecb991-3888-4394-8774-3eb05dac7028)
 
-  💡 If the IP address is not visible, you can get it with the comand ifconfig once you're connected
+  💡 If the IP address is not visible, you can get it with the comamnd `ifconfig` once you're connected
 
 - Then you will be able to register using the following login:password:level100:level100
   Use the SSH connection available on port 4242: `$>ssh level100@192.168.16.128 -p 4242`
