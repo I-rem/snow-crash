@@ -37,9 +37,9 @@ Now that I have the necessary file in my current directory I can run
 
 `$ sudo wireshark level02.pcap`:
 
-![image](https://github.com/user-attachments/assets/63556eb5-97d5-4cb0-9092-f043b100a056)
+![image](https://github.com/user-attachments/assets/ba0cc406-d451-48ee-950a-3514e07a8308)
 
-Going one by one I see the word Password on line 42 but am unable to decipher much else. Let's go to Analyze → [Follow](https://www.wireshark.org/docs/wsug_html_chunked/ChAdvFollowStreamSection.html) → TCP Stream window.
+Going one by one I see the word Password on line 42(hehe) but am unable to decipher much else. Let's go to Analyze → [Follow](https://www.wireshark.org/docs/wsug_html_chunked/ChAdvFollowStreamSection.html) → TCP Stream window.
 
 This will display stream content in the same sequence as it appeared on the network. Traffic from the client to the server will be colored red, while traffic from the server to the client will be colored blue.
 
