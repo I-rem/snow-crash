@@ -1,5 +1,5 @@
 # level00 
-I was completely lost when I first started this level. I kept running around various directories unable to find a clue.
+I was completely lost when I first started this level. I kept running around various directories unable to find a clue. (for level00 at least)
 So I went back to intra.42.fr to take a look at the resources given to us to see if I had missed anything. 
 
 And voila~
@@ -48,7 +48,11 @@ Or maybe not ]: (
 
 Going back to the introduction video now. We are told that "John" is a must have utility for this project and that "John" is a software that allows you to crack passwords. Our file in this exercise was called "john", **gasp** is this a clue?!
 
-I tried running John the Ripper password cracker but that didn't work and it would be overkill for this exercise anyway. We just need to decode the password and we were told that we may need to use [dcode.fr](https://www.dcode.fr/) for 1 or 2 levels. 
+I tried running John the Ripper password cracker but that didn't work and it would be overkill for this exercise anyway.
+
+![image](https://github.com/user-attachments/assets/d535b814-ef6c-467c-8a44-caf1e7f8cd88)
+
+We need to decode the password somehow and we were told that we may need to use [dcode.fr](https://www.dcode.fr/) for 1 or 2 levels. 
 
 I didn't want to manually check different ciphers so I just used [multidecoder](https://www.cachesleuth.com/multidecoder/)
 
