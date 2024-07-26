@@ -10,7 +10,7 @@ The `/etc/passwd` file is a plain text file with information for all user accoun
 ![image](https://github.com/user-attachments/assets/e0e774c1-a028-45b7-9026-9af3eb66da61)
 
 The second column represents the encrypted password stored in the /etc/shadow file (we of course don't have accesss to that).
-And it is normally not supposed show the password or the has like that but we are lucky today.
+And it is normally not supposed show the password or the hash like that but we are lucky today.
 
 Let's `su flag01` and try entering `42hDRfypTqqnw` as the password.
 
