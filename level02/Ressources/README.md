@@ -43,6 +43,27 @@ Going one by one I see the word Password on line 42(hehe) but am unable to decip
 
 This will display stream content in the same sequence as it appeared on the network. Traffic from the client to the server will be colored red, while traffic from the server to the client will be colored blue.
 
+Non-printable characters are replaced by dots.
+
 ![image](https://github.com/user-attachments/assets/ba82eb31-4bb9-4ad1-bd51-b5ddd80abd1c)
 
 Alright, this looks promising `Password: ft_wandr...NDRel.L0L` 
+
+![image](https://github.com/user-attachments/assets/9b94a91d-1848-4f86-884e-2a3bbf49f302)
+
+Uh...oh right, remember when I said non-printable characters are replaced by dots? Let's take a closer look at what all those dots are meant to be
+
+![image](https://github.com/user-attachments/assets/95510868-d994-47d6-b034-c1c236b97600)
+
+0D is the carriage return which shows the point client was done entering his password.
+7F is the Delete character. Client must have made some mistakes while entering the password or maybe it was an attempt to confuse anyone else who might be listening in.
+
+In any case `ft_wandr...NDRel.L0L` becomes `ft_waNDReL0L`
+
+Let's try it
+
+![image](https://github.com/user-attachments/assets/09bf0234-51a0-40c2-b9c3-691117436e01)
+
+![image](https://github.com/user-attachments/assets/9a7f45ae-fc3e-482d-a443-242461a4211d)
+
+Finally!
