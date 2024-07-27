@@ -25,3 +25,9 @@ done
 ![image](https://github.com/user-attachments/assets/b87abe0b-a821-4aeb-8825-df6c51f46fdd)
 
 ![image](https://github.com/user-attachments/assets/3b8515a6-d804-49d6-9297-a6b91595bad1)
+
+`level05@SnowCrash:/opt/openarenaserver$ echo "/bin/getflag > /tmp/test" > /opt/openarenaserver/test`
+
+![image](https://github.com/user-attachments/assets/86d331f9-ec8a-41fa-87b3-868b45507df9)
+
+![image](https://github.com/user-attachments/assets/bf7f7f7f-833a-4800-a8cd-6254228e1175)
