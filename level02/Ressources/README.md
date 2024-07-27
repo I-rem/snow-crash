@@ -6,7 +6,7 @@ Surprise! Our home directory is not empty this time.
 So, what is a **pcap** file and how do we make sense of it? 
 
 PCAP files are a common format for storing packet captures. A PCAP file includes an exact copy of every byte of every packet as seen on the network. [See](https://www.endace.com/learn/what-is-a-pcap-file)
-There are various open-source tools we can use to read and write PCAP files including tcpdump, libPCAP, WinPCAP, NPCAP, Zeek, Snort, Suricata, Wireshark. **Wireshark** is among the recommended tools for this project and it is preinstalled on my machine so we'll go with that.
+There are various open-source tools we can use to read and write PCAP files including tcpdump, libPCAP, WinPCAP, NPCAP, Zeek, Snort, Suricata, Wireshark. **Wireshark** is among the recommended tools for this project and it is preinstalled on my machine so we'll go with that. (Edit: It was actually cloudshark that was recommended for this project but it is too late now and wireshark is more convenient)
 
 I said my machine though, not the host machine. 
 
