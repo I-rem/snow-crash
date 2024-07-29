@@ -19,15 +19,15 @@ Let's `su flag01` and try entering `42hDRfypTqqnw` as the password.
 Okay this was expected, now how do we crack this? I once again tried my luck with [multidecoder](https://www.cachesleuth.com/multidecoder/) but it was no use.
 Then I gave [crackstation](https://crackstation.net/) ,which is a free password hash cracker, a try. But it was unable to even detect the type of hash.
 
+![image](https://github.com/user-attachments/assets/f0afd8a2-7b4e-4322-acf5-a3c2207bb00e)
+
 John the Ripper it is, 
 
 `echo 42hDRfypTqqnw > flag01.txt`
 
 `john flag01.txt`
 
-![image](https://github.com/user-attachments/assets/aa432fbf-2bb6-453b-94ba-38c86cdf47c8)
-
-![image](https://github.com/user-attachments/assets/f0afd8a2-7b4e-4322-acf5-a3c2207bb00e)
+![image](https://github.com/user-attachments/assets/aa432fbf-2bb6-453b-94ba-38c86cdf47c8)
 
 `abcdefg`, really?
 
