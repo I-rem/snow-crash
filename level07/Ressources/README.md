@@ -12,5 +12,10 @@ I tried to cat this file and crashed my computer. Don't do that.
 
 ![image](https://github.com/user-attachments/assets/a31fc635-9451-4d0d-90fb-4edea50881a8)
 
+```
+level07@SnowCrash:~$ export LOGNAME=\`getflag\`
+```
+
+![image](https://github.com/user-attachments/assets/0acdda98-73eb-4cc5-a61a-53099d7b2378)
 
 
