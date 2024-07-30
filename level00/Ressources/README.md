@@ -3,6 +3,7 @@ I was completely lost when I first started this level. I kept running around var
 So I went back to intra.42.fr to take a look at the resources given to us to see if I had missed anything. 
 
 And voila~
+
 ![image](https://github.com/user-attachments/assets/8152c79d-f72f-4776-b6f5-ae5d77eb0d67)
 
 The introduction video shows a README file that says `FIND this first file who can run only as flag00`
@@ -34,6 +35,7 @@ Awesome, let's investigate `/usr/sbin/john` and `/rofs/usr/sbin/john`
 I wanted to first confirm that these files indeed belong to flag00
 
 ![image](https://github.com/user-attachments/assets/0517cb34-33b5-4e36-8861-ff464142bb89)
+
 ![image](https://github.com/user-attachments/assets/4fb903c2-f6b0-4ca1-b80b-1b5d1fe50564)
 
 So we have read-only permission for the flag00 group as well as other users.(interestingly none for the flag00 user?) Whatever I will just read the content then:
