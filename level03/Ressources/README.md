@@ -66,3 +66,5 @@ We can simply run `getflag` from here.
 ![image](https://github.com/user-attachments/assets/f11312ea-28ea-4183-b56f-171b1bb2de57)
 
 ![image](https://github.com/user-attachments/assets/767fd644-da97-4bef-bb30-f5169509080f)
+
+We could have made our script run getflag and be done with it but it's more fun this way ~
