@@ -38,7 +38,12 @@ Rest of the stuff requires us to understand the CGI module.
 
 CGI stands for [Common Gateway Interface](https://datatracker.ietf.org/doc/html/rfc3875), it’s a protocol for executing scripts via web requests, and in the late 1990’s was the main way to write dynamic programs for the Web. It’s also the name of the Perl module that is now deprecated.
 
-The first way to pass data is with the query string, (the portion of a URI beginning with ?), which you see in URLs like `https://example.com/?foo=bar`. This uses the “GET” request method, and becomes available to the program as $ENV->{QUERY_STRING}, which in this case is foo=bar (CGI programs receive their arguments as environment variables). But CGI provides the `param` method which parses the query string into key value pairs, so you can work with them like a hash:
+The first way to pass data is with the query string, (the portion of a URI beginning with ?), which you see in URLs like `https://example.com/?foo=bar`. This uses the “GET” request method, and becomes available to the program as $ENV->{QUERY_STRING}, which in this case is foo=bar (CGI programs receive their arguments as environment variables). But CGI provides the `param` method which parses the query string into key value pairs, so you can work with them like a hash.
+
+Essentialy we have a script that is able to handle [HTTP requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods). Subroutine x is called with the argument `param("x")`, here the `param()` function retrieves the value of parameter x from the HTTP request. And then this value is printed.
+
+Easy enough right? We can start interacting with the script in a meaningful way now.
+
 
 ```
 level04@SnowCrash:~$ curl 'http://localhost:4747/level04.pl?x=`getflag`'
