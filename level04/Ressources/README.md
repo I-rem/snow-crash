@@ -26,13 +26,19 @@ x(param("x"));
 ```
 After a crash course in perl [subroutines](https://www.tutorialspoint.com/perl/perl_subroutines.htm) and the [CGI](https://www.perl.com/article/perl-and-cgi/) module we see that we are provided a neatly vulnerable code.
 
-First let's discuss some syntax. In Perl we can pass various arguments to a subroutine like you do in any other programming language and they can be acessed inside the function using the special array @_. Thus the first argument to the function is in $_[0], the second is in $_[1], and so on.
+First let's discuss some syntax. The [qw](https://www.geeksforgeeks.org/perl-qw-operator/)(quote-word) operator in Perl is used to extract each element of the given string as it is in an array of elements in single-quote. For example: qw(Hello world) becomes ('Hello', 'world')
+
+In our case it is used to import a list of functions from the CGI module. This list consists of only one element though...Anyway's the function we imorted is `param` and we will come back to it later
+
+In Perl we can pass various arguments to a subroutine like you do in any other programming language and they can be acessed inside the function using the special array @_. Thus the first argument to the function is in $_[0], the second is in $_[1], and so on.
 
 In our script we have a subroutine called `x`. Within x a variable called `y` is defined. y takes the value of the first argument passed to x, as indicated by `$y = $_[0]` . Then it prints the value of y with echo.
 
 Rest of the stuff requires us to understand the CGI module. 
 
 CGI stands for [Common Gateway Interface](https://datatracker.ietf.org/doc/html/rfc3875), it’s a protocol for executing scripts via web requests, and in the late 1990’s was the main way to write dynamic programs for the Web. It’s also the name of the Perl module that is now deprecated.
+
+The first way to pass data is with the query string, (the portion of a URI beginning with ?), which you see in URLs like `https://example.com/?foo=bar`. This uses the “GET” request method, and becomes available to the program as $ENV->{QUERY_STRING}, which in this case is foo=bar (CGI programs receive their arguments as environment variables). But CGI provides the `param` method which parses the query string into key value pairs, so you can work with them like a hash:
 
 ```
 level04@SnowCrash:~$ curl 'http://localhost:4747/level04.pl?x=`getflag`'
