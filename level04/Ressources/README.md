@@ -54,15 +54,31 @@ Our goal is to run `getflag` as `flag04` somehow. A naive first attempt would be
 
 ![image](https://github.com/user-attachments/assets/1cb59aef-72ea-4ac6-ad08-f7d02426af4f)
 
-This is the same as running `echo getflag`, it doesn't run `getflag` but simply prints it out as any other string. How do we subsitute commands in shell-scripting? By using $() or backticks!
+This is the same as running `echo getflag`, it doesn't run `getflag` but simply prints it out as any other string. How do we subsitute commands in shell-scripting? By using **$()** or **backticks**!
 
 ![image](https://github.com/user-attachments/assets/ae0eac71-be2a-4d01-b18e-500eac4988ce)
 
-This didn't exactly go as intended because `getflag` was run as level04 before the script and the resulting string was put as parameters in the URL
+This didn't exactly go as intended because `getflag` was executed as level04 before curl and the resulting string was put as parameters in the URL.
 
-`curl 'http://localhost:4747?x=$(getflag)'`
+However if I use single quotes everything inside will be taken as literally and no command substitution will happen (at least as far as curl is conerned): `curl 'http://localhost:4747?x=$(getflag)'`
 
 ![image](https://github.com/user-attachments/assets/f314e30b-c37a-4d4c-af35-940a683f8e3e)
+
+Yay! But how did this work if single quotes interpert the strings literally? Well that's the vulnerable script's fault. 
+
+```
+print `echo $y 2>&1`;
+````
+
+becomes,
+
+```
+print `echo $(getflag) 2>&1` ;
+```
+
+And now getflag will run with the privileges of the user under which the Perl CGI script is executed. Then echo will print out the result.
+
+**Alternatively** we can make use of backticks too:
 
 ```
 level04@SnowCrash:~$ curl 'http://localhost:4747/level04.pl?x=`getflag`'
@@ -72,4 +88,4 @@ level04@SnowCrash:~$ curl 'http://localhost:4747/level04.pl?x=`getflag`'
 
 ![image](https://github.com/user-attachments/assets/f252564f-cfb3-4278-976d-06e83465f6b9)
 
-
+_Fin_
