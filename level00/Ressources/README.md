@@ -1,5 +1,5 @@
 # level00 
-I was completely lost when I first started this level. I kept running around various directories unable to find a clue. (for level00 at least)
+I was completely lost when I first started this level. I kept running around various directories unable to find a clue. (I found stuff that could be useful for the upcoming levels though)
 So I went back to intra.42.fr to take a look at the resources given to us to see if I had missed anything. 
 
 And voila~
@@ -61,6 +61,8 @@ I didn't want to manually check different ciphers so I just used [multidecoder](
 Finally! the password is `nottoohardhere`
 
 ![image](https://github.com/user-attachments/assets/bcd772cf-2df4-4d7e-985e-667e4fa79de0)
+
+Now that I am the user flag00, running `getflag` will give me the token for the next level.
 
 ![image](https://github.com/user-attachments/assets/a66a44ce-3da3-48f6-a883-241956235701)
 
