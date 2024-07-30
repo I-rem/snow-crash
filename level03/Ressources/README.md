@@ -15,7 +15,7 @@ However when we run it nothing too exciting happens
 
 ![image](https://github.com/user-attachments/assets/d950f2fa-c121-4211-a6e5-61d50bf0e5dc)
 
-I tried giving it different input values but the output was always the same. Unfortunately we aren't provided with the source code.
+I tried giving it different input values but the output was always the same. Unfortunately we aren't provided with the source code. So some [reverse engineering](https://www.codementor.io/@packt/reverse-engineering-a-linux-executable-hello-world-rjceryk5d) will be necessary.
 
 ![image](https://github.com/user-attachments/assets/679226be-e1f0-4bce-9667-7f06131efe3d)
 
