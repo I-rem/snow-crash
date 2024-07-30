@@ -30,9 +30,18 @@ After all this information gathering let's finally read the file and see what's 
 
 You might have realized that this is a [cron job](https://www.freecodecamp.org/news/cron-jobs-in-linux/) and might be getting flashbacks from born2broot at this point.
 
-Little reminder here, **cron** is a job scheduling utility present in Unix like systems. The crond daemon enables cron functionality and runs in background. The cron reads the **crontab** (cron tables) for running predefined scripts. For more information see the manual pages of [crontab(5)](https://man7.org/linux/man-pages/man5/crontab.5.html) and [cron(8)](https://www.man7.org/linux/man-pages/man8/cron.8.html).
+As a little reminder, **cron** is a job scheduling utility present in Unix like systems. The **crond** daemon enables cron functionality and runs in background. The cron reads the **crontab** (cron tables) for running predefined scripts. For more information see the manual pages of [crontab(5)](https://man7.org/linux/man-pages/man5/crontab.5.html) and [cron(8)](https://www.man7.org/linux/man-pages/man8/cron.8.html).
 
 Okay, back to the file at hand: `*/2 * * * * su -c "sh /usr/sbin/openarenaserver" - flag05`
+
+The crontab format is as follows: MIN HOUR DOM(Day of month) MON DOW(Day of week) CMD(command)
+
+In our case the job is scheduled for every 2 minutes. But is going to happen every 2 minutes? The `-c` flag (aka `--command`) specifies a command that will be invoked by the shell using its -c. In our case this command is `sh /usr/sbin/openarenaserver` which simply runs the script called `openarenaserver` located in `/usr/sbin`. It then provides the username with the - option. 
+
+So when this command runs the enviroment will behave as if the flag05 user had logged in directly. (Great news for us!)
+
+(Also I don't know why but the man page for su mentions that 
+<i>When `-` is used, it must be specified as the last su option. The other forms (-l and --login) do not have this restriction.</i> for anyone who was wondering)
 
 ![image](https://github.com/user-attachments/assets/e7fa4a20-25c6-403f-a2cf-80ed8d4b9a4c)
 
