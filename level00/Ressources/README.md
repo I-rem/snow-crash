@@ -68,4 +68,6 @@ Now that I am the user flag00, running `getflag` will give me the token for the 
 
 ![image](https://github.com/user-attachments/assets/a66a44ce-3da3-48f6-a883-241956235701)
 
+![image](https://github.com/user-attachments/assets/7df05f9e-ec01-4917-9e7a-07b7b5c113c8)
+
 Hurray! Only 9 more levels to go...
