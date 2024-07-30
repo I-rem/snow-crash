@@ -1,8 +1,16 @@
+#level05
+
+When we login to level05 we are greeted with this mysterious message:
+
 ![image](https://github.com/user-attachments/assets/87ab7b93-e29c-4c7c-b8e9-cbdd9a9ad828)
 
-`level05@SnowCrash:~$ find / -name mail 2>/dev/null`
+If you don't get the message above try reseting your ssh connection and logging in to level05 directly. 
+
+Now let's see where this 'mail' is: `level05@SnowCrash:~$ find / -name mail 2>/dev/null`
 
 ![image](https://github.com/user-attachments/assets/517f1790-d4ca-4573-9c6b-2cd67210827d)
+
+We need to investigate further
 
 ![image](https://github.com/user-attachments/assets/8fa938cc-70db-464a-9e2e-30cc4949b8de)
 
