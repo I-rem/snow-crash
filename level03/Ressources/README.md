@@ -48,9 +48,9 @@ Now we will change the enviroment variables to trick the program into running th
 
 The [PATH](https://www.digitalocean.com/community/tutorials/how-to-view-and-update-the-linux-path-environment-variable) variable contains a list of directories the system checks before running a command. Updating the PATH variable will enable you to run any executables found in the directories mentioned in PATH from any directory without typing the absolute file path.
 
-We will add the /tmp directory at the beginning of our PATH so that it will be checked first. `level03@SnowCrash:~$ export PATH=/tmp/:$PATH`
+We will add the /tmp directory at the beginning of our PATH so that it will be checked first. `level03@SnowCrash:~$ export PATH=/tmp:$PATH`
 
-![image](https://github.com/user-attachments/assets/8f285853-333c-4da1-82af-a10dd10c231c)
+![image](https://github.com/user-attachments/assets/dfd2000e-0bfa-40b1-8762-f4e24a6e11d1)
 
 Let's run level03 and see what happens.
 
