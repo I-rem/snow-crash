@@ -10,17 +10,25 @@ Now let's see where this 'mail' is: `level05@SnowCrash:~$ find / -name mail 2>/d
 
 ![image](https://github.com/user-attachments/assets/517f1790-d4ca-4573-9c6b-2cd67210827d)
 
-We need to investigate further
+We need to investigate further: `level05@SnowCrash:~$ find / -name mail 2>/dev/null | xargs file`
 
 ![image](https://github.com/user-attachments/assets/8fa938cc-70db-464a-9e2e-30cc4949b8de)
 
+After examining each result we find a script called flag5 in the `/var/mail` directory
+
 ![image](https://github.com/user-attachments/assets/0fc7e992-9d27-4af9-85a1-0887a472aeec)
+
+Owner of the both the script and the directory is root but they belong to the `mail` group
+
+![image](https://github.com/user-attachments/assets/36f3ed98-232d-4689-a3f1-b5a0ce26c994)
+
+After all this information gathering let's finally read the file and see what's up.
 
 ![image](https://github.com/user-attachments/assets/b292d9a3-f7c3-466a-8444-ef9119382e91)
 
 `*/2 * * * * su -c "sh /usr/sbin/openarenaserver" - flag05`
 
-![image](https://github.com/user-attachments/assets/3fb1d7d0-947d-4781-a613-d2b851c505bf)
+You might have realized that this is a [cron job](https://www.freecodecamp.org/news/cron-jobs-in-linux/) and might be getting flashbacks from born2broot at this point.
 
 ![image](https://github.com/user-attachments/assets/e7fa4a20-25c6-403f-a2cf-80ed8d4b9a4c)
 
