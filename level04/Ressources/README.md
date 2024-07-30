@@ -24,7 +24,7 @@ sub x {
 }
 x(param("x"));
 ```
-After a crash course in perl [subroutines](https://www.tutorialspoint.com/perl/perl_subroutines.htm) and the [CGI](https://www.perl.com/article/perl-and-cgi/) module we see that we are provided a neatly vulnerable code.
+After a crash course in perl [subroutines](https://www.tutorialspoint.com/perl/perl_subroutines.htm) and the [CGI](https://www.perl.com/article/perl-and-cgi/) module we see that we are provided with a neatly vulnerable code.
 
 First let's discuss some syntax. The [qw](https://www.geeksforgeeks.org/perl-qw-operator/)(quote-word) operator in Perl is used to extract each element of the given string as it is in an array of elements in single-quote. For example: qw(Hello world) becomes ('Hello', 'world')
 
@@ -42,8 +42,13 @@ The first way to pass data is with the query string, (the portion of a URI begin
 
 Essentialy we have a script that is able to handle [HTTP requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods). Subroutine x is called with the argument `param("x")`, here the `param()` function retrieves the value of parameter x from the HTTP request. And then this value is printed.
 
-Easy enough right? We can start interacting with the script in a meaningful way now.
+Easy enough right? We can start interacting with the script in a meaningful way now. Let's give the server some input to work with.
 
+`level04@SnowCrash:~$ curl http://localhost:4747?x=hello`
+
+![image](https://github.com/user-attachments/assets/58986977-11e9-4d9c-b7c5-f2a7a0597748)
+
+If proper input sanitization is not made this script could be vulnerable to command injections. Since it runs with the priviliges of `flag04` the consequences could be severe. Let's exploit!
 
 ```
 level04@SnowCrash:~$ curl 'http://localhost:4747/level04.pl?x=`getflag`'
