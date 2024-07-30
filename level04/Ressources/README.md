@@ -1,8 +1,15 @@
+# Level04
+This time we are given a Perl script
+
 ![image](https://github.com/user-attachments/assets/5a276f3c-077c-4f13-b572-df191e644603)
 
 ![image](https://github.com/user-attachments/assets/afec7e89-9de1-4216-9479-25f7c7e55e12)
 
+It has the SUID bit set like the last time. So we will try to exploit the priviliges of flag04 somehow. Let's run it,
+
 ![image](https://github.com/user-attachments/assets/085d513d-7dc6-4b2c-89ef-8574d0d3f4c1)
+
+What is it trying to achieve exactly? Let's read the file contents:
 
 ![image](https://github.com/user-attachments/assets/c888db70-7096-4545-a2ad-dbf77416d8d4)
 
