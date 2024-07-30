@@ -29,10 +29,39 @@ Using the `strings` command:
 
 The strings are listed in order from the start of the file. And we see that this program simply runs `echo Exploit me` and echo is located in `/usr/bin/env`, how do we exploit this?
 
-![image](https://github.com/user-attachments/assets/679226be-e1f0-4bce-9667-7f06131efe3d)
+Well we can write a script called echo and make it run that perhaps?
+
+`level03@SnowCrash:~$ vim /tmp/echo`
+
+```
+#!/bin/sh
+/bin/sh
+```
+Also don't forget to give it the permissions: `level03@SnowCrash:~$ chmod 777 /tmp/echo` (execute permission would be enough by itsef too) 
+
+![image](https://github.com/user-attachments/assets/14369589-b885-4a9c-b9c6-76e0c96f08ea)
+
+This script will simply invoke a new shell. We'll soon see how that becomes useful. 
+Now we will change the enviroment variables to trick the program into running this before the default echo command.
+
+![image](https://github.com/user-attachments/assets/a935bf82-f56c-44c0-bd70-0aa192e02823)
+
+The [PATH](https://www.digitalocean.com/community/tutorials/how-to-view-and-update-the-linux-path-environment-variable) variable contains a list of directories the system checks before running a command. Updating the PATH variable will enable you to run any executables found in the directories mentioned in PATH from any directory without typing the absolute file path.
+
+We will add the /tmp directory at the beginning of our PATH so that it will be checked first. `level03@SnowCrash:~$ export PATH=/tmp/:$PATH`
+
+![image](https://github.com/user-attachments/assets/8f285853-333c-4da1-82af-a10dd10c231c)
+
+Let's run level03 and see what happens.
+
+![image](https://github.com/user-attachments/assets/2d868c60-db28-4640-93b1-353f72b26876)
+
+Okay, what happened?
 
 ![image](https://github.com/user-attachments/assets/3f3436bd-2cb9-46d8-b4d1-b275eb9f864e)
 
+We got reverse shell 🎉 level03 runs with the priviliges of user flag03, so we ended up starting a new shell as flag03.
+We can simply run `getflag` from here.
 
 ![image](https://github.com/user-attachments/assets/f11312ea-28ea-4183-b56f-171b1bb2de57)
 
