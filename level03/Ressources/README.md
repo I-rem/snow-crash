@@ -17,6 +17,18 @@ However when we run it nothing too exciting happens
 
 I tried giving it different input values but the output was always the same. Unfortunately we aren't provided with the source code. So some [reverse engineering](https://www.codementor.io/@packt/reverse-engineering-a-linux-executable-hello-world-rjceryk5d) will be necessary.
 
+As an example of good practice, the process of reversing a program first needs to start with proper identification. Let's start with `level03@SnowCrash:~$ file level030
+`
+![image](https://github.com/user-attachments/assets/60243797-a254-4474-901a-3fabebef1c88)
+
+It is a 32-bit ELF file-type. ELF files are native executables on Linux platforms. When we try to use `cat` on binary files we get gibberish at best and a blue-screen at worst. But these files might still contain valuable human readable text. So how do we see them?
+
+Using the `strings` command:
+
+![image](https://github.com/user-attachments/assets/ce0aeba4-7c6b-4bdb-b642-2dd44d1d81d2)
+
+The strings are listed in order from the start of the file. And we see that this program simply runs `echo Exploit me` and echo is located in `/usr/bin/env`, how do we exploit this?
+
 ![image](https://github.com/user-attachments/assets/679226be-e1f0-4bce-9667-7f06131efe3d)
 
 ![image](https://github.com/user-attachments/assets/3f3436bd-2cb9-46d8-b4d1-b275eb9f864e)
