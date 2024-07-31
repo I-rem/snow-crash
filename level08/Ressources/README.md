@@ -37,6 +37,8 @@ We can verify this behaviour:
 
 ![image](https://github.com/user-attachments/assets/17e90802-1582-425c-ae53-cc5a11e34731)
 
+![image](https://github.com/user-attachments/assets/91c0c5ea-1025-41b6-87bd-fe7525675e60)
+
 ![image](https://github.com/user-attachments/assets/bb44931b-3856-4dc7-bd0d-91ddbccb294e)
 
 ![image](https://github.com/user-attachments/assets/2e302dcc-1018-47dc-afcf-16f65edc6fdb)
