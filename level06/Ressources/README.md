@@ -70,5 +70,12 @@ So perhaps something like `[x getflag]` would work?
 
 ![image](https://github.com/user-attachments/assets/2e1ddd1b-6cf3-42a8-9427-e52e05d7527f)
 
-Okay this is better than nothing. So since it will be interpreted as php code we should work on our syntax.
+Okay this is better than nothing. So since it will be interpreted as php code we should work on our syntax. After various attempts only thing that seems to work is using the [complex(curly)](https://www.php.net/manual/en/language.types.string.php) syntax
 
+```
+level06@SnowCrash:~$ echo '[x ${`getflag`}]' > /tmp/test
+```
+
+![image](https://github.com/user-attachments/assets/d6b82106-52d5-4ba7-a558-80539c766f09)
+
+I was hoping that we could run something crazier but this works too.
