@@ -27,6 +27,9 @@ Wee see that it uses printf, read, open and strstr. The first 3 makes sense but 
 
 I am curious about a couple of things now, I will make it output all of these error messages to find answers.
 
+![image](https://github.com/user-attachments/assets/ff73443b-d383-4857-97b4-b7bbcfe00a54)
+
+
 ![image](https://github.com/user-attachments/assets/8902f3e0-f30a-4cf1-b676-3c9e57314cec)
 
 ![image](https://github.com/user-attachments/assets/bb44931b-3856-4dc7-bd0d-91ddbccb294e)
