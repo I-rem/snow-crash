@@ -29,7 +29,11 @@ I am curious about a couple of things now, I will make it output all of these er
 
 ![image](https://github.com/user-attachments/assets/ff73443b-d383-4857-97b4-b7bbcfe00a54)
 
+Time for some [dynamic analysis](https://www.codementor.io/@packt/reverse-engineering-a-linux-executable-hello-world-rjceryk5d):
+
 ![image](https://github.com/user-attachments/assets/8902f3e0-f30a-4cf1-b676-3c9e57314cec)
+
+We can verify this behaviour:
 
 ![image](https://github.com/user-attachments/assets/17e90802-1582-425c-ae53-cc5a11e34731)
 
