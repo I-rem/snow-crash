@@ -3,6 +3,8 @@ Surprise! Our home directory is not empty this time.
 
 ![image](https://github.com/user-attachments/assets/e90f08cc-e8c6-43d2-a211-426c455d7998)
 
+![image](https://github.com/user-attachments/assets/134c1920-cd17-48c7-8b12-ca8bad5826ee)
+
 So, what is a **pcap** file and how do we make sense of it? 
 
 PCAP files are a common format for storing packet captures. A PCAP file includes an exact copy of every byte of every packet as seen on the network. [See](https://www.endace.com/learn/what-is-a-pcap-file)
