@@ -36,4 +36,6 @@ So this script has 2 functions. The first function `y` takes an argument `m`, ma
 
 x is called with the first and second parameters provided to the script as its arguments. Then the result is printed out. I tried to run the script with different values to see if I could manipulate the output without taking a closer look at the regex but failed. I guess we actually have to understand what all these patterns are for.
 
-https://regex101.com/
+[regex101](https://regex101.com/) is an amazing all-in-one tool for anything related to regex. It even has a handy substitution function which is perfect for the task at hand.
+
+`$m = preg_replace("/\./", " x ", $m);` This takes m and replaces every instance of `.`with `x`, `a.bc` -> `axbc`
