@@ -38,4 +38,8 @@ x is called with the first and second parameters provided to the script as its a
 
 [regex101](https://regex101.com/) is an amazing all-in-one tool for anything related to regex. It even has a handy substitution function which is perfect for the task at hand.
 
-`$m = preg_replace("/\./", " x ", $m);` This takes m and replaces every instance of `.`with `x`, `a.bc` -> `axbc`
+- `$m = preg_replace("/\./", " x ", $m);` This takes the string m and replaces every instance of `.`with ` x `, `a.bc` -> `a x bc`
+- `$m = preg_replace("/@/", " y", $m);` This takes the string m and replaces every instance of `@` with ` y`, `a@bc` -> `a ybc`
+-  `$a = preg_replace("/(\[x (.*)\])/e", "y(\"\\2\")", $a);` This takes the string a and replaces every instance of `@` with ` y`, `a@bc` -> `a ybc`
+- `$a = preg_replace("/\[/", "(", $a);` This takes the string a and replaces every instance of `[` with ` (`, `a[bc` -> `a(bc`
+- `$a = preg_replace("/\]/", ")", $a);` This takes the string a and replaces every instance of `]` with `)`, `a]bc` -> `a)ybc`
