@@ -53,12 +53,32 @@ for i in /opt/openarenaserver/* ; do
         rm -f "$i"
 done
 ```
+This script one by one takes each file in the /opt/openarenaserver directory and runs them with the `bash` command. `-x` option will print out the commands as they are executed.
+
+Then the files are removed with `rm -f`. Which would make this script somewhat dangerous if it were used on the wrong directory. 
+
+The `ulimit` command is used to put various boundries for system resources. In this case it was used to put limit on maximum cput time used. Which means that we can't exploit this code **too much** and execute commands that will run indefinetly.
+
+This is not an issue, all we want is the flag and `ls -l` shows us that this script belongs to the flag05
+
+![image](https://github.com/user-attachments/assets/7549b0d5-13c4-4fba-ba30-fbe2ed4e760f)
+
+We don't have execute right but that doesn't matter becuase it runs automatically in the background thanks to cron! Let's get to exploiting then.
+
+![image](https://github.com/user-attachments/assets/f02c1f9c-aa6f-4530-ae0b-fa9b0592fb5c)
+
 ![image](https://github.com/user-attachments/assets/b87abe0b-a821-4aeb-8825-df6c51f46fdd)
+
+![image](https://github.com/user-attachments/assets/26ac9f42-a231-4027-b136-c2d97316d302)
+
 
 ![image](https://github.com/user-attachments/assets/3b8515a6-d804-49d6-9297-a6b91595bad1)
 
 `level05@SnowCrash:/opt/openarenaserver$ echo "/bin/getflag > /tmp/test" > /opt/openarenaserver/test`
 
+
 ![image](https://github.com/user-attachments/assets/86d331f9-ec8a-41fa-87b3-868b45507df9)
+
+Now all we need to do is wait. The commands will be run as flag05 
 
 ![image](https://github.com/user-attachments/assets/bf7f7f7f-833a-4800-a8cd-6254228e1175)
