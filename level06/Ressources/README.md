@@ -42,4 +42,12 @@ x is called with the first and second parameters provided to the script as its a
 - `$m = preg_replace("/@/", " y", $m);` This takes the string m and replaces every instance of `@` with ` y`, `a@bc` -> `a ybc`
 -  `$a = preg_replace("/(\[x (.*)\])/e", "y(\"\\2\")", $a);` This takes the string a and replaces every instance of `@` with ` y`, `a@bc` -> `a ybc`
 - `$a = preg_replace("/\[/", "(", $a);` This takes the string a and replaces every instance of `[` with ` (`, `a[bc` -> `a(bc`
-- `$a = preg_replace("/\]/", ")", $a);` This takes the string a and replaces every instance of `]` with `)`, `a]bc` -> `a)ybc`
+- `$a = preg_replace("/\]/", ")", $a);` This takes the string a and replaces every instance of `]` with `)`, `a]bc` -> `a)bc`
+
+Since our script only calls the function x, only the square brackets should be replaced. Let's test it out:
+
+`level06@SnowCrash:~$ echo "[test@gmail.com]" > /tmp/test`
+`level06@SnowCrash:~$ ./level06 /tmp/test`
+
+![image](https://github.com/user-attachments/assets/7db9f00c-7dfe-4682-965e-f26a5acda24e)
+
