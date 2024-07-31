@@ -62,6 +62,10 @@ Uh...oh right, remember when I said non-printable characters are replaced by dot
 0D is the carriage return which shows the point client was done entering his password.
 7F is the Delete character. Client must have made some mistakes while entering the password or maybe it was an attempt to confuse anyone else who might be listening in.
 
+`$ man ascii`
+
+![image](https://github.com/user-attachments/assets/d8d7daf2-1354-4453-96f6-705d4a71a553)
+
 In any case `ft_wandr...NDRel.L0L` becomes `ft_waNDReL0L`
 
 Let's try it
