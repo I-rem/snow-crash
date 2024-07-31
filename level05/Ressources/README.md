@@ -65,20 +65,29 @@ This is not an issue, all we want is the flag and `ls -l` shows us that this scr
 
 We don't have execute right but that doesn't matter becuase it runs automatically in the background thanks to cron! Let's get to exploiting then.
 
+I would like to start by experimenting with the `bash` command.
+
 ![image](https://github.com/user-attachments/assets/f02c1f9c-aa6f-4530-ae0b-fa9b0592fb5c)
 
 ![image](https://github.com/user-attachments/assets/b87abe0b-a821-4aeb-8825-df6c51f46fdd)
 
+With the `-x` option
+
 ![image](https://github.com/user-attachments/assets/26ac9f42-a231-4027-b136-c2d97316d302)
 
+Okay all we need to do is run getflag in a similar way. We will put the file in `/opt/openarenaserver/`
+Let's go there first and inspect
 
 ![image](https://github.com/user-attachments/assets/3b8515a6-d804-49d6-9297-a6b91595bad1)
 
-`level05@SnowCrash:/opt/openarenaserver$ echo "/bin/getflag > /tmp/test" > /opt/openarenaserver/test`
+It is empty, which makes sense as the directory is wiped every 2 minutes.
 
+We just put our exploit file in.
+
+`level05@SnowCrash:/opt/openarenaserver$ echo getflag > /opt/openarenaserver/flag`
 
 ![image](https://github.com/user-attachments/assets/86d331f9-ec8a-41fa-87b3-868b45507df9)
 
-Now all we need to do is wait. The commands will be run as flag05 
+ Now we wait...and nothing happens. The output is not printed on the terminal.
 
 ![image](https://github.com/user-attachments/assets/bf7f7f7f-833a-4800-a8cd-6254228e1175)
