@@ -88,6 +88,22 @@ We just put our exploit file in.
 
 ![image](https://github.com/user-attachments/assets/86d331f9-ec8a-41fa-87b3-868b45507df9)
 
- Now we wait...and nothing happens. The output is not printed on the terminal.
+ Now we wait...and nothing happens. The output is not printed on the terminal. I am assuming that this is some [subshell](https://www.geeksforgeeks.org/shell-scripting-subshell/) behaviour.
 
-![image](https://github.com/user-attachments/assets/bf7f7f7f-833a-4800-a8cd-6254228e1175)
+Subshell allow you to execute commands within a separate shell environment. They can be created using the parentheses operator or the bash command, and they provide a way to isolate the effects of certain commands or operations. Subshells can be useful for setting temporary variables, changing directories, executing commands in the background etc. without affecting the current shell environment. (You can correct me here though)
+
+Long story short we will just include ouput redirection in our script: `$ echo "getflag > /tmp/myflag" > /opt/openarenaserver/getmyflag`
+
+![image](https://github.com/user-attachments/assets/90012be8-594c-4e5a-a4d0-bc8a1055f68d)
+
+All we need to do is wait for a maximum of 2 minutes as getflag is run with flag05's priviliges.
+
+Let's check:
+
+![image](https://github.com/user-attachments/assets/04fd3376-9878-4325-9f9e-dc1af4c432fb)
+
+Woah, I somewhat expected this to not work not gonna lie.
+
+![image](https://github.com/user-attachments/assets/2670d89f-3b31-4828-b43b-d2aeda2da80e)
+
+Time for level 6!
