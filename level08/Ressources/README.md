@@ -39,6 +39,8 @@ The output of ltrace shows a readable code of what the program did. It logs the 
 
 ![image](https://github.com/user-attachments/assets/8902f3e0-f30a-4cf1-b676-3c9e57314cec)
 
+It calls strstr to see if the filename contains the string "token"
+
 We can verify this behaviour:
 
 ![image](https://github.com/user-attachments/assets/17e90802-1582-425c-ae53-cc5a11e34731)
