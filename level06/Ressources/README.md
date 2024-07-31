@@ -68,4 +68,7 @@ That's fun and all but what we really want to do is run some code.
 The part of the code that will be executed is the part between x and ]. 
 So perhaps something like `[x getflag]` would work?
 
+![image](https://github.com/user-attachments/assets/2e1ddd1b-6cf3-42a8-9427-e52e05d7527f)
+
+Okay this is better than nothing. So since it will be interpreted as php code we should work on our syntax.
 
