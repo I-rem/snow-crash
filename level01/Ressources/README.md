@@ -27,11 +27,27 @@ John the Ripper it is,
 
 `john flag01.txt`
 
-![image](https://github.com/user-attachments/assets/aa432fbf-2bb6-453b-94ba-38c86cdf47c8)
+![image](https://github.com/user-attachments/assets/aa432fbf-2bb6-453b-94ba-38c86cdf47c8)
+
 
 `abcdefg`, really?
 
+Also keep in mind that once John finds a password, it will be printed to the terminal and saved into a file called `~/.john/john.pot.`  John  will  read  this file  when  it  restarts  so  it doesn't try to crack already done passwords.
+
+To see the cracked passwords, use `john -show passwd`
+
+Important: do this under the same directory where the password was cracked (when using  the  cronjob,  /var/lib/john),  otherwise it won't work.
+
+example: 
+
+![image](https://github.com/user-attachments/assets/c1394d56-a630-484a-b486-46fd1c22ef8d)
+
+![image](https://github.com/user-attachments/assets/fbffe65f-64ff-4b58-a5ba-2fee2bcc4f23)
+
+Allright, let's check if our result was correct
+
 ![image](https://github.com/user-attachments/assets/64bef436-e751-4ef8-90f7-648c078cb2d4)
+
 ![image](https://github.com/user-attachments/assets/509c785d-fba5-44f7-af6d-d2854657cf46)
 
 Great!
