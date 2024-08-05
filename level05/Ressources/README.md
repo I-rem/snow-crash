@@ -36,12 +36,12 @@ Okay, back to the file at hand: `*/2 * * * * su -c "sh /usr/sbin/openarenaserver
 
 The crontab format is as follows: MIN HOUR DOM(Day of month) MON DOW(Day of week) CMD(command)
 
-In our case the job is scheduled for every 2 minutes. But what is going to happen every 2 minutes? The `-c` flag (aka `--command`) specifies a command that will be invoked by the shell using its -c. In our case this command is `sh /usr/sbin/openarenaserver` which simply runs the script called `openarenaserver` located in `/usr/sbin`. It then provides the username with the - option. 
+In our case the job is scheduled for every 2 minutes. But what is going to happen every 2 minutes? The `-c` flag (aka `--command`) specifies a command that will be invoked by the shell using its -c. In our case this command is `sh /usr/sbin/openarenaserver` which simply runs the script called `openarenaserver` located in `/usr/sbin`. It then provides the username with the `-` option. 
 
 So when this command runs the enviroment will behave as if the flag05 user had logged in directly. (Great news for us!)
 
 (Also I don't know why but the man page for su mentions that 
-<i>When `-` is used, it must be specified as the last su option. The other forms (-l and --login) do not have this restriction.</i> for anyone who was wondering)
+<i>When `-` is used, it must be specified as the last su option. The other forms (-l and --login) do not have this restriction.</i> For anyone who was wondering)
 
 ![image](https://github.com/user-attachments/assets/e7fa4a20-25c6-403f-a2cf-80ed8d4b9a4c)
 
@@ -57,13 +57,13 @@ This script one by one takes each file in the /opt/openarenaserver directory and
 
 Then the files are removed with `rm -f`. Which would make this script somewhat dangerous if it were used on the wrong directory. 
 
-The `ulimit` command is used to put various boundries for system resources. In this case it was used to put limit on maximum cput time used. Which means that we can't exploit this code **too much** and execute commands that will run indefinetly.
+The `ulimit` command is used to put various boundries for system resources. In this case it was used to put limit on maximum cpu time used. Which means that we can't exploit this code **too much** and execute commands that will run indefinetly.
 
-This is not an issue, all we want is the flag and `ls -l` shows us that this script belongs to the flag05
+This is not an issue, all we want is to get the flag and `ls -l` shows us that this script belongs to the flag05
 
 ![image](https://github.com/user-attachments/assets/7549b0d5-13c4-4fba-ba30-fbe2ed4e760f)
 
-We don't have execute right but that doesn't matter becuase it runs automatically in the background thanks to cron! Let's get to exploiting then.
+We don't have the execute right but that doesn't matter becuase it runs automatically in the background thanks to cron! Let's get to exploiting then.
 
 I would like to start by experimenting with the `bash` command.
 
