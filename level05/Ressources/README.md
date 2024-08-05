@@ -36,7 +36,7 @@ Okay, back to the file at hand: `*/2 * * * * su -c "sh /usr/sbin/openarenaserver
 
 The crontab format is as follows: MIN HOUR DOM(Day of month) MON DOW(Day of week) CMD(command)
 
-In our case the job is scheduled for every 2 minutes. But is going to happen every 2 minutes? The `-c` flag (aka `--command`) specifies a command that will be invoked by the shell using its -c. In our case this command is `sh /usr/sbin/openarenaserver` which simply runs the script called `openarenaserver` located in `/usr/sbin`. It then provides the username with the - option. 
+In our case the job is scheduled for every 2 minutes. But what is going to happen every 2 minutes? The `-c` flag (aka `--command`) specifies a command that will be invoked by the shell using its -c. In our case this command is `sh /usr/sbin/openarenaserver` which simply runs the script called `openarenaserver` located in `/usr/sbin`. It then provides the username with the - option. 
 
 So when this command runs the enviroment will behave as if the flag05 user had logged in directly. (Great news for us!)
 
