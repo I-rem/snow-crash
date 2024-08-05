@@ -30,7 +30,7 @@ First let's discuss some syntax. The [**qw**](https://www.geeksforgeeks.org/perl
 
 In our case it is used to import a list of functions from the CGI module. This list consists of only one element though...Anyways the function we imported is `param` and we will come back to it later
 
-In Perl we can pass various arguments to a subroutine like you do in any other programming language and they can be acessed inside the function using the special array @_. Thus the first argument to the function is in $_[0], the second is in $_[1], and so on.
+In Perl we can pass various arguments to a subroutine like you do in any other programming language and they can be acessed inside the function using the special array `@_`. Thus the first argument to the function is in $_[0], the second is in $_[1], and so on.
 
 In our script we have a subroutine called `x`. Within x a variable called `y` is defined. y takes the value of the first argument passed to x, as indicated by `$y = $_[0]` . Then it prints the value of y with echo.
 
