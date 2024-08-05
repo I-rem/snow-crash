@@ -39,7 +39,7 @@ scp copies files between hosts on a network.
 
 Now that I have the necessary file in my current directory I can run
 
-`$ sudo wireshark level02.pcap`:
+`$ sudo wireshark level02.pcap` (or do `$ chmod +r level02.pcap` before and ditch sudo)
 
 ![image](https://github.com/user-attachments/assets/ba0cc406-d451-48ee-950a-3514e07a8308)
 
