@@ -26,9 +26,9 @@ x(param("x"));
 ```
 After a crash course in perl [subroutines](https://www.tutorialspoint.com/perl/perl_subroutines.htm) and the [CGI](https://www.perl.com/article/perl-and-cgi/) module we see that we are provided with a neatly vulnerable code.
 
-First let's discuss some syntax. The [qw](https://www.geeksforgeeks.org/perl-qw-operator/)(quote-word) operator in Perl is used to extract each element of the given string as it is in an array of elements in single-quote. For example: qw(Hello world) becomes ('Hello', 'world')
+First let's discuss some syntax. The [**qw**](https://www.geeksforgeeks.org/perl-qw-operator/)(quote-word) operator in Perl is used to extract each element of the given string as it is in an array of elements in single-quote. For example: _qw(Hello world) becomes ('Hello', 'world')_
 
-In our case it is used to import a list of functions from the CGI module. This list consists of only one element though...Anyway's the function we imorted is `param` and we will come back to it later
+In our case it is used to import a list of functions from the CGI module. This list consists of only one element though...Anyways the function we imported is `param` and we will come back to it later
 
 In Perl we can pass various arguments to a subroutine like you do in any other programming language and they can be acessed inside the function using the special array @_. Thus the first argument to the function is in $_[0], the second is in $_[1], and so on.
 
