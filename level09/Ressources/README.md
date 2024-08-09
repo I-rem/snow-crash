@@ -47,3 +47,26 @@ Let's run it `level09@SnowCrash:~$ cat token | xargs python /tmp/decrypt.py`
 
 🥳
 
+Some C if you prefer that:
+
+```
+#include <stdio.h>
+
+int main(int argc, char **argv)
+{
+        if (argc == 2)
+        {
+                int index = 0;
+
+                while (*argv[1])
+                {
+                        printf("%c", *argv[1] - index);
+                        ++argv[1];
+                        ++index;
+                }
+                printf("\n");
+        }
+        else
+                printf("Give me one(1) argument pls\n");
+}
+```
