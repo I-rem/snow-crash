@@ -16,6 +16,8 @@ Weird? This time it does not take a file as input but accepts any string and pri
 
 ![image](https://github.com/user-attachments/assets/c6f74b8c-26b2-4cf5-9eb9-155297c2d7fc)
 
-Okay this makes more sense.
+Okay this makes more sense. The program takes a string and encrypts it by adding each character its index. 
+
+`abc` becomes `(a + 0)(b + 1)(c + 2)` = `ace`
 
 ![image](https://github.com/user-attachments/assets/465226ff-b3c4-40a4-904a-d1d8e823726c)
