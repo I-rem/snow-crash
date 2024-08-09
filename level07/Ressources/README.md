@@ -29,7 +29,11 @@ We can confirm with `level07@SnowCrash:~$ printenv LOGNAME`
 
 ![image](https://github.com/user-attachments/assets/1f43e154-4402-4ef1-ae0d-1fa41a848726)
 
-We can change the value in a way that can make level07 run getflag. And get the token thanks to the priviliges of flag07 user.
+or with `level07@SnowCrash:~$ ltrace ./level07`
+
+![image](https://github.com/user-attachments/assets/70e251dd-7474-4d0d-b902-8a5c7aa29f1e)
+
+We can modify the value of LOGNAME in a way that can make level07 run getflag. And get the token thanks to the priviliges of flag07 user.
 
 The solution seems straightforward
 ```
