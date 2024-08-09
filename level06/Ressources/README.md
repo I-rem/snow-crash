@@ -48,7 +48,7 @@ What does it do?
 
 _If this modifier is set, preg_replace() does normal substitution of backreferences in the replacement string, **evaluates it as PHP code**, and uses the result for replacing the search string._ [See](https://wiki.php.net/rfc/remove_preg_replace_eval_modifier)
 
-So anything formatted like [x*] will be replaced. And the replacement part will call the function y with everything in between x and ]. The replacement string weill be executed as a PHP code.
+So anything formatted like [x *] will be replaced. And the replacement part will call the function y with everything in between x and ]. The replacement string weill be executed as a PHP code.
 
 This is a huge vulnerability!
 
