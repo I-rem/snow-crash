@@ -39,5 +39,11 @@ if (len(sys.argv) == 2):
 else:
         print("I need one argument")
 ```
+Let's run it `level09@SnowCrash:~$ cat token | xargs python /tmp/decrypt.py`
 
+![image](https://github.com/user-attachments/assets/e2f51256-4580-4957-b18a-2b48989f1412)
+
+![image](https://github.com/user-attachments/assets/70470394-a4ca-4926-b0bc-08cf4b87b057)
+
+🥳
 
