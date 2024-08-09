@@ -16,8 +16,28 @@ Weird? This time it does not take a file as input but accepts any string and pri
 
 ![image](https://github.com/user-attachments/assets/c6f74b8c-26b2-4cf5-9eb9-155297c2d7fc)
 
-Okay this makes more sense. The program takes a string and encrypts it by adding each character its index. 
+Okay this makes more sense. The program takes a string and encrypts it by adding each character its own index. 
 
 `abc` becomes `(a + 0)(b + 1)(c + 2)` = `ace`
 
-![image](https://github.com/user-attachments/assets/465226ff-b3c4-40a4-904a-d1d8e823726c)
+So I first assumed that we need to put the contents of the token through this program `level09@SnowCrash:~$ cat token | xargs ./level09`
+
+![image](https://github.com/user-attachments/assets/a0db69fd-3790-4ddc-bcba-b87ffc274458)
+
+This wasn't helpful at all. I suppose the contents of the token were already encrypted. What we need to do now is to reverse the operation.
+Here is a simple python script:
+
+```
+import sys
+
+if (len(sys.argv) == 2):
+        hash = sys.argv[1]
+        decrypted_hash = ""
+        for i in range(0, len(hash)):
+                decrypted_hash = decrypted_hash + chr(ord(hash[i]) - i)
+        print(decrypted_hash)
+else:
+        print("I need one argument")
+```
+
+
