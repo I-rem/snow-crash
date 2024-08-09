@@ -1,6 +1,9 @@
 # snow-crash
 This project is an introduction to computer security. Snow Crash will make you discover security in various sub-domains, with a developer-oriented approach. You will become familiar with several languages (ASM/perl/php…), develop a certain logic to understand unknown programs, and become aware of problems linked to simple programming errors
 
+**Subject Pdf:** https://cdn.intra.42.fr/pdf/pdf/67418/en.subject.pdf
+**SnowCrash.iso:** https://cdn.intra.42.fr/isos/SnowCrash.iso
+
 # General Instructions
 - To make this project, you will have to use a VM(64 bits). Once you have started
 your machine with the ISO provided with this subject, if your configuration is right,
