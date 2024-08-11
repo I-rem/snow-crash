@@ -6,9 +6,9 @@ And voila~
 
 ![image](https://github.com/user-attachments/assets/8152c79d-f72f-4776-b6f5-ae5d77eb0d67)
 
-The introduction video shows a README file that says `FIND this first file who can run only as flag00`
+The introduction video shows a README file that is not available on our VM and it says `FIND this first file who can run only as flag00`
 
-Okay I will just search for the file named flag00 recursively from the root
+Okay, I will just search for the file named flag00 recursively from the root
 
 `find / -type f -name "flag00"`
 
@@ -22,7 +22,7 @@ The output is crowded with error messages, let's redirect them for readability's
 
 Oh, nothing. Well it says "file who **runs** as flag00". I suppose we need a file that can be run by the **user** flag00?
 
-find command has a neat option we can use here
+`find` command has a neat option we can use here
 
 ![image](https://github.com/user-attachments/assets/4f444f11-e435-4728-991e-5fc817fc128d)
 
@@ -38,7 +38,7 @@ I wanted to first confirm that these files indeed belong to flag00
 
 ![image](https://github.com/user-attachments/assets/4fb903c2-f6b0-4ca1-b80b-1b5d1fe50564)
 
-So we have read-only permission for the flag00 group as well as other users.(interestingly none for the flag00 user?) Whatever I will just read the content then:
+So we have read-only permission for the flag00 group as well as other users. (Interestingly none for the flag00 user?) Whatever I will just read the contents then:
 
 ![image](https://github.com/user-attachments/assets/8d16bd44-2572-4dc5-972e-60e90a684c61)
 
@@ -50,13 +50,13 @@ Or maybe not ]: (
 
 Going back to the introduction video now. We are told that "John" is a must have utility for this project and that "John" is a software that allows you to crack passwords. Our file in this exercise was called "john", **gasp** is this a clue?!
 
-I tried running John the Ripper password cracker but that didn't work and it would be overkill for this exercise anyway.
+I tried running John the Ripper password cracker but that didn't work and I guess it would be overkill for the first exercise anyway.
 
 ![image](https://github.com/user-attachments/assets/d535b814-ef6c-467c-8a44-caf1e7f8cd88)
 
 We need to decode the password somehow and we were told that we may need to use [dcode.fr](https://www.dcode.fr/) for 1 or 2 levels. 
 
-I didn't want to manually check different ciphers so I just used [multidecoder](https://www.cachesleuth.com/multidecoder/)
+I didn't want to manually check different ciphers so I just used [multidecoder](https://www.cachesleuth.com/multidecoder/) and saw that it was using a simple Ceaser cipher.
 
 ![image](https://github.com/user-attachments/assets/162c68b7-2357-4a46-89d9-64037c502bb1)
 
