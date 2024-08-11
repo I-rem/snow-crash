@@ -7,7 +7,7 @@ Surprise! Our home directory is not empty this time.
 
 So, what is a **pcap** file and how do we make sense of it? 
 
-PCAP files are a common format for storing packet captures. A PCAP file includes an exact copy of every byte of every packet as seen on the network. [See](https://www.endace.com/learn/what-is-a-pcap-file)
+PCAP files are a common format for storing packet captures. A PCAP file includes an exact copy of every byte of every packet as seen on the network. [See for more information](https://www.endace.com/learn/what-is-a-pcap-file).
 There are various open-source tools we can use to read and write PCAP files including tcpdump, libPCAP, WinPCAP, NPCAP, Zeek, Snort, Suricata, Wireshark. **Wireshark** is among the recommended tools for this project and it is preinstalled on my machine so we'll go with that. (Edit: It was actually cloudshark that was recommended for this project but it is too late now and wireshark is more convenient)
 
 I said my machine though, not the host machine. 
@@ -15,7 +15,7 @@ I said my machine though, not the host machine.
 ![image](https://github.com/user-attachments/assets/e46661ec-337c-4ad2-bfd4-95d0e2d0b172)
 
 When using tools like john I was easily able to copy-paste text between machines but I need to actually transfer a file now. Did you know that there is a whole course for that on [HTB Academy](https://academy.hackthebox.com/course/preview/file-transfers)?
-We probably won't need to go thorough all that though. We just need to learn to use the **SCP** command as suggested by the project's subject.pdf.
+We probably won't need to go thorough all that though. We just need to learn how to use the **SCP** command as suggested by the project's subject.pdf.
 
 `man scp`:
 ```
@@ -39,15 +39,15 @@ scp copies files between hosts on a network.
 
 Now that I have the necessary file in my current directory I can run
 
-`$ sudo wireshark level02.pcap` (or do `$ chmod +r level02.pcap` before and ditch sudo)
+`$ sudo wireshark level02.pcap` (or do `$ chmod +r level02.pcap` beforehand and ditch sudo)
 
 ![image](https://github.com/user-attachments/assets/ba0cc406-d451-48ee-950a-3514e07a8308)
 
 Going one by one I see the word Password on line 43(why not 42?) but am unable to decipher much else. Let's go to Analyze → [Follow](https://www.wireshark.org/docs/wsug_html_chunked/ChAdvFollowStreamSection.html) → TCP Stream window.
 
-This will display stream content in the same sequence as it appeared on the network. Traffic from the client to the server will be colored red, while traffic from the server to the client will be colored blue.
+This will display stream content in the same sequence as it appeared on the network. Traffic from the **client to the server** will be colored **red**, while traffic from the **server to the client** will be colored **blue**.
 
-Non-printable characters are replaced by dots.
+**Non-printable** characters are replaced by **dots**.
 
 ![image](https://github.com/user-attachments/assets/ba82eb31-4bb9-4ad1-bd51-b5ddd80abd1c)
 
@@ -59,8 +59,8 @@ Uh...oh right, remember when I said non-printable characters are replaced by dot
 
 ![image](https://github.com/user-attachments/assets/95510868-d994-47d6-b034-c1c236b97600)
 
-0D is the carriage return which shows the point client was done entering his password.
-7F is the Delete character. Client must have made some mistakes while entering the password or maybe it was an attempt to confuse anyone else who might be listening in.
+**0D** is the **carriage return** which shows the point client was done entering his password.
+**7F** is the **Delete** character. Client must have made some mistakes while entering the password or maybe it was an attempt to confuse anyone else who might be listening in.
 
 `$ man ascii`
 
@@ -78,7 +78,7 @@ Finally!
 
 <h2 id="bug">Blue Screen of Death </h2>
 
-If running scp causes your computer to crash like me, it might be because of the VM's network settings.
+If running `scp` causes your computer to crash like me, it might be because of the VM's network settings.
 
 The snow-crash machine is using Host-Only Adapter as we discussed before.
 
@@ -92,11 +92,11 @@ When I changed it to **Host-only Adapter** the issue was resolved.
 
 Hopefully those who are on Mac are having easier time here and not dealing with weird VirtualBox bugs.
 
-### Alternatively 
+### Alternatively,
 
-You can also use netcat to transfer files like so:
+You can also use `netcat` to transfer files like so:
 
-First, we start listening on port 4444. `nc -l -p 4444 > level02.pcap`
+First, we start listening on a port of our choice: `nc -l -p 4444 > level02.pcap` and we will be redirecting anything that comes through that port to a file we created. (It doesn't have to be named leve02)
 
 ![image](https://github.com/user-attachments/assets/7edb672c-d09b-4c37-84e0-afb69061f4ff)
 
