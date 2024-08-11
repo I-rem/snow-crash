@@ -9,14 +9,14 @@ The `/etc/passwd` file is a plain text file with information for all user accoun
 ![image](https://github.com/user-attachments/assets/db6f332b-5bc5-47c2-94c5-f0dcea2e3d93)
 ![image](https://github.com/user-attachments/assets/e0e774c1-a028-45b7-9026-9af3eb66da61)
 
-The second column represents the encrypted password stored in the /etc/shadow file (we of course don't have accesss to that).
+The second column represents the encrypted password stored in the `/etc/shadow` file (we of course don't have accesss to that).
 And it is normally not supposed show the password or the hash like that but we are lucky today.
 
 Let's `su flag01` and try entering `42hDRfypTqqnw` as the password.
 
 ![image](https://github.com/user-attachments/assets/56b319e9-675b-4e85-a6f1-706f57cc942b)
 
-Okay this was expected, now how do we crack this? I once again tried my luck with [multidecoder](https://www.cachesleuth.com/multidecoder/) but it was no use.
+Okay this much was expected, now how do we crack this? I once again tried my luck with [multidecoder](https://www.cachesleuth.com/multidecoder/) but it was no use.
 Then I gave [crackstation](https://crackstation.net/) ,which is a free password hash cracker, a try. But it was unable to even detect the type of hash.
 
 ![image](https://github.com/user-attachments/assets/f0afd8a2-7b4e-4322-acf5-a3c2207bb00e)
@@ -41,6 +41,8 @@ Important: do this under the same directory where the password was cracked (when
 example: 
 
 ![image](https://github.com/user-attachments/assets/c1394d56-a630-484a-b486-46fd1c22ef8d)
+
+Or,
 
 ![image](https://github.com/user-attachments/assets/fbffe65f-64ff-4b58-a5ba-2fee2bcc4f23)
 
