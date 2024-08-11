@@ -23,7 +23,7 @@ As an example of good practice, the process of reversing a program first needs t
 
 It is a 32-bit ELF file-type. ELF files are native executables on Linux platforms. When we try to use `cat` on binary files we get gibberish at best and a blue-screen at worst. But these files might still contain valuable human readable text. So how do we see them?
 
-Using the `strings` command:
+By using the `strings` command:
 
 ![image](https://github.com/user-attachments/assets/ce0aeba4-7c6b-4bdb-b642-2dd44d1d81d2)
 
@@ -37,7 +37,7 @@ Well we can write a script called echo and make it run that perhaps?
 #!/bin/sh
 /bin/sh
 ```
-Also don't forget to give it the permissions: `level03@SnowCrash:~$ chmod 777 /tmp/echo` (execute permission would be enough by itsef too) 
+Also don't forget to give it the necessary permissions: `level03@SnowCrash:~$ chmod 777 /tmp/echo` (execute permission would be enough by itsef too) 
 
 ![image](https://github.com/user-attachments/assets/14369589-b885-4a9c-b9c6-76e0c96f08ea)
 
