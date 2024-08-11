@@ -31,7 +31,7 @@ I am curious about a couple of things now, I will make it output all of these er
 
 ![image](https://github.com/user-attachments/assets/0807852f-55dc-404f-9b06-1c57e62cb0c0)
 
-For a nonexistent file it gives the "unable to open" message. And when the file exists but doesn't have read rights it still gives the same message. It also never gave us the "access denied" message we got at the beginning. So it must have condition that is not related to file permissions.
+For a nonexistent file it gives the "unable to open" message. And when the file exists but doesn't have read rights it still gives the same message. It also never gave us the "access denied" message we got at the beginning. So it must have a condition that is not related to file permissions.
 
 Time for some [dynamic analysis](https://www.codementor.io/@packt/reverse-engineering-a-linux-executable-hello-world-rjceryk5d): `level08@SnowCrash:~$ ltrace ./level08 token`
 
