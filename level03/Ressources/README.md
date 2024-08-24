@@ -33,7 +33,7 @@ Well we can write a script called echo and make it run that perhaps?
 
 `level03@SnowCrash:~$ vim /tmp/echo`
 
-```
+```console
 #!/bin/sh
 /bin/sh
 ```
