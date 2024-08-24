@@ -18,7 +18,8 @@ When using tools like john I was easily able to copy-paste text between machines
 We probably won't need to go thorough all that though. We just need to learn how to use the **SCP** command as suggested by the project's subject.pdf.
 
 `man scp`:
-```
+
+```console
 scp — OpenSSH secure file copy
 
 scp copies files between hosts on a network.
