@@ -48,7 +48,7 @@ So when this command runs the enviroment will behave as if the flag05 user had l
 Let's check the contents of the script then, `$ cat /usr/sbin/openarenaserver`
 ![image](https://github.com/user-attachments/assets/e7fa4a20-25c6-403f-a2cf-80ed8d4b9a4c)
 
-```
+```sh
 #!/bin/sh
 
 for i in /opt/openarenaserver/* ; do
