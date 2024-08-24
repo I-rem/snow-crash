@@ -25,9 +25,10 @@ So I first assumed that we need to put the contents of the token through this pr
 ![image](https://github.com/user-attachments/assets/a0db69fd-3790-4ddc-bcba-b87ffc274458)
 
 This wasn't helpful at all. I suppose the contents of the token were already encrypted. What we need to do now is to reverse the operation.
+
 Here is a simple python script:
 
-```
+```python
 import sys
 
 if (len(sys.argv) == 2):
@@ -49,7 +50,7 @@ Let's run it `level09@SnowCrash:~$ cat token | xargs python /tmp/decrypt.py`
 
 Some C if you prefer that:
 
-```
+```C
 #include <stdio.h>
 
 int main(int argc, char **argv)
