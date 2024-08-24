@@ -13,7 +13,7 @@ What is it trying to achieve exactly? Let's read the file contents:
 
 ![image](https://github.com/user-attachments/assets/c888db70-7096-4545-a2ad-dbf77416d8d4)
 
-```
+```perl
 #!/usr/bin/perl
 # localhost:4747
 use CGI qw{param};
@@ -24,6 +24,7 @@ sub x {
 }
 x(param("x"));
 ```
+
 After a crash course in perl [subroutines](https://www.tutorialspoint.com/perl/perl_subroutines.htm) and the [CGI](https://www.perl.com/article/perl-and-cgi/) module we see that we are provided with a neatly vulnerable code.
 
 First let's discuss some syntax. The [**qw**](https://www.geeksforgeeks.org/perl-qw-operator/)(quote-word) operator in Perl is used to extract each element of the given string as it is in an array of elements in single-quote. For example: _qw(Hello world) becomes ('Hello', 'world')_
@@ -66,13 +67,13 @@ However if I use single quotes everything inside will be taken as literally and 
 
 Yay! But how did this work if single quotes interpert the strings literally? Well that's the vulnerable script's fault. 
 
-```
+```sh
 print `echo $y 2>&1`;
 ````
 
 becomes,
 
-```
+```sh
 print `echo $(getflag) 2>&1` ;
 ```
 
@@ -80,7 +81,7 @@ And now getflag will run with the privileges of the user under which the Perl CG
 
 **Alternatively** we can make use of backticks too:
 
-```
+```ShellSession
 level04@SnowCrash:~$ curl 'http://localhost:4747/level04.pl?x=`getflag`'
 ```
 
