@@ -13,7 +13,7 @@ It expects a file as input.
 
 And seemingly it just displays the contents of the file? We can learn more from the source code `$ cat level06.php`:
 
-```
+```php
 #!/usr/bin/php
 <?php
 function y($m) {
@@ -72,7 +72,7 @@ So perhaps something like `[x getflag]` would work?
 
 Okay this is better than nothing. So since it will be interpreted as php code we should work on our syntax. After various attempts only thing that seems to work is using the [complex(curly)](https://www.php.net/manual/en/language.types.string.php) syntax
 
-```
+```ShellSession
 level06@SnowCrash:~$ echo '[x ${`getflag`}]' > /tmp/test
 ```
 
